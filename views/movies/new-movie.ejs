@@ -7,9 +7,12 @@
   <label
     >Cast:
     <select name="cast" id="cast" multiple>
-      <option value="id-actor">Id actor</option>
+      <% allCelebrities.forEach(celebrity => { %>
+       <option value="<%- celebrity._id %>">I<%- celebrity.name %></option>
+      <% }) %>
+      
     </select>
   </label>
 
-  <button>Create new movie</button>
+  <button type="submit">Create new movie</button>
 </form>

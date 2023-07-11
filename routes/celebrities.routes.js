@@ -24,7 +24,6 @@ router.post("/create", async (req, res) => {
 router.get("/", async (req, res) => {
   try {
     const allCelebrities = await Celebrity.find();
-    console.log(allCelebrities);
     res.render("celebrities/celebrities", {allCelebrities});
   } catch (error) {
     console.log(error);
